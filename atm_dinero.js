@@ -34,7 +34,7 @@ function entregarLaPlata()
 	  				b.cantidad = b.cantidad - papeles;
   			}
   	 }
-		 // corregir esta entregando dinero cuando los billetes no son multiplos de 10
+		 //Esta entregando dinero cuando los billetes no son multiplos de 10
 		 if (dinero == 0)
 		  {
 				 for (r of entregado)
