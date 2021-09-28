@@ -4,6 +4,6 @@ class Billete {
 	 this.img = new Image();
 	 this.valor = v;
 	 this.cantidad = c;
-	 this.img.src = v.toString() + ".png";
+	 this.img.src = "imagenes/" + v.toString() + ".png";
 	}
 }
