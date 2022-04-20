@@ -1,20 +1,23 @@
 var caja = [];
 var d = document.getElementById("dinero_a_retirar");
 //b = bonton "Retirar" que dispara la funcion
+var bc = document.getElementById("consultar");
 var b = document.getElementById("retirar");
 var resultado = document.getElementById("resultado");
-var valInicial = document.getElementById("valorInicial")
-b.addEventListener("click", entregarLaPlata)
-
+var valInicial = document.getElementById("valorInicial");
+b.addEventListener("click", entregarLaPlata);
+bc.addEventListener("click",consultarCuenta);
 var cincuenta = new Billete(50, 6);
 var veinte = new Billete(20, 10);
 var diez = (new Billete(10, 10));
 caja.push(cincuenta);
 caja.push(veinte);
 caja.push(diez);
-valInicial.innerHTML = ("El valor inicial de tu cuenta ahorro es: <strong> " + nSaldo() + "</strong><br/>");
 
-
+function consultarCuenta(){
+	valInicial.innerHTML = ("El valor de tu cuenta ahorro es: <strong> " + nSaldo() + "</strong><br/>");
+	resultado.innerHTML = "";
+}
 function entregarLaPlata() {
 	resultado.innerHTML = "";
 	var entregado = [];
